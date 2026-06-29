@@ -1,9 +1,9 @@
 import { Page, Locator } from '@playwright/test';
-import { BasePage } from '../utils/baseClass';
+import { BaseClass } from '../Utils/baseClass';
 
 declare const process: any;
 
-export class LoginPage extends BasePage {
+export class LoginPage extends BaseClass {
   readonly usernameInput: Locator;
   readonly passwordInput: Locator;
   readonly loginButton: Locator;
@@ -22,9 +22,9 @@ export class LoginPage extends BasePage {
   }
 
   async login(username: string, password: string) {
-    await this.fill(this.usernameInput, username, 'username field');
-    await this.fill(this.passwordInput, password, 'password field');
-    await this.click(this.loginButton, 'login button');
+    await this.fill(this.usernameInput, username, );
+    await this.fill(this.passwordInput, password, );
+    await this.click(this.loginButton);
   }
 
   async getErrorText(): Promise<string> {

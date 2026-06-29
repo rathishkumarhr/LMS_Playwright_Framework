@@ -13,7 +13,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './Real time project',
+  testDir: './Real_time_projectRunner',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -25,12 +25,12 @@ export default defineConfig({
   /* Retry on CI only */
   timeout: 30*10*1000,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html',{outputFolder:'UI-user interface\reports\playwright-report/html',open: 'always'}],['allure-playwright',{outputFolder:'UI-user interface\reports\allure-results'}]],
+  reporter: [['html',{outputFolder:'UI-user_interface/reports/playwright-report/html',open: 'always'}],['allure-playwright',{outputFolder:'UI-user_interface/reports/allure-results'}]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
-    baseURL:"",
+   
     headless: true,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     actionTimeout: 1000,

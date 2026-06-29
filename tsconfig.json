@@ -12,14 +12,14 @@
     "baseUrl": ".",
     "ignoreDeprecations": "6.0",
     "paths": {
-      "@pages/*": ["UI-user interface-SRC/pages/*"],
-      "@fixtures/*": ["UI-user interface-SRC/fixtures/*"],
-      "@utils/*": ["UI-user interface-SRC/utils/*"],
+      "@pages/*": ["UI-user_interface-SRC/pages/*"],
+      "@fixtures/*": ["UI-user_interface-SRC/fixtures/*"],
+      "@utils/*": ["UI-user_interface-SRC/utils/*"],
     },
     "outDir": "./dist",
     "rootDir": "."
   },
-  "include": ["UI-user interface-SRC/**/*.ts", "playwright.config.ts"],
+  "include": ["UI-user_interface-SRC/**/*.ts", "playwright.config.ts"],
   "exclude": [
     "node_modules",
     "dist",

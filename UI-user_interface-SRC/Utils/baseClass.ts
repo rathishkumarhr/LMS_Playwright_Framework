@@ -1,5 +1,5 @@
-import { Page, Locator } from "@playwright/test";
-import { logger } from "../Utils/logger";
+import { Page, Locator,expect } from "@playwright/test";
+import { logger } from "./logger";
 
 
 import {
@@ -9,7 +9,7 @@ import {
     defaultClickOptions,
     WaitForOptions,
     defaultWaitOptions
-} from "../Utils/baseOptions";
+} from "./baseOptions";
 
 export class BaseClass {
     readonly page: Page;
@@ -402,4 +402,9 @@ export class BaseClass {
             throw new Error(`Failed to waitFor element | ${e.message}`);
         }
     }
+
+    async getText(locator: Locator): Promise<string> {
+       await expect(locator).toBeVisible();
+      return (await locator.textContent())?.trim() || '';
+  }
 }
