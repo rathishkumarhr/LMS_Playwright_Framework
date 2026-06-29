@@ -9,6 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
+    "baseUrl": ".",
     "ignoreDeprecations": "6.0",
     "paths": {
       "@pages/*": ["UI-user interface-SRC/pages/*"],
