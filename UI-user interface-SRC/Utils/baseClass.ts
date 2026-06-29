@@ -1,5 +1,5 @@
 import { Page, Locator } from "@playwright/test";
-import { logger } from "./logger";
+import { logger } from "../Utils/logger";
 
 
 import {
@@ -9,7 +9,7 @@ import {
     defaultClickOptions,
     WaitForOptions,
     defaultWaitOptions
-} from "./baseOptions";
+} from "../Utils/baseOptions";
 
 export class BaseClass {
     readonly page: Page;

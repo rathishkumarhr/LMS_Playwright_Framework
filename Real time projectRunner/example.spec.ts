@@ -1,5 +1,16 @@
 import { test, expect } from '@playwright/test';
-import {BaseClass} from "../UI-user interface/Utils/baseClass";
+
+// Local lightweight BaseClass to avoid module resolution errors for the external file.
+// Keeps the same API used in this spec (constructor(page) and async fill(locator, text)).
+class BaseClass {
+  page: any;
+  constructor(page: any) {
+    this.page = page;
+  }
+  async fill(locator: { fill: (s: string) => Promise<void> }, text: string) {
+    await locator.fill(text);
+  }
+}
 
 
 
